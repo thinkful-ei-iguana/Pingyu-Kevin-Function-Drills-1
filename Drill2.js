@@ -28,7 +28,7 @@ console.log(beyond(2));
 */
 
 
-function decode(word) {
+/* function decode(word) {
 
     switch (word[0]) {
         case 'a':
@@ -51,3 +51,31 @@ function decode(word) {
 const result = `${decode('craft')}${decode('block')}${decode('argon')}${decode('meter')}${decode('bells')}${decode('brown')}${decode('croon')}${decode('droop')}`;
 
 console.log(result);
+*/
+
+function month(str) {
+    let result = '';
+    switch (str) {
+        case 'January':
+        case 'March':
+        case 'May':
+        case 'July':
+        case 'August':
+        case 'October':
+        case 'December':
+            result = 'has 31 days.';
+            break;
+        case 'April':
+        case 'June':
+        case 'September':
+        case 'November':
+            result = 'has 30 days.';
+            break;
+        default:
+            console.log('Must provide a valid month.');
+    }
+
+    return str + ' ' + result;
+}
+
+month('');
