@@ -52,7 +52,7 @@ const result = `${decode('craft')}${decode('block')}${decode('argon')}${decode('
 
 console.log(result);
 */
-
+/*
 function month(str) {
     let result = '';
     switch (str) {
@@ -79,3 +79,21 @@ function month(str) {
 }
 
 month('');
+
+*/
+
+function game(num) {
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+
+    if (randomNo === 3 && num === 2) {
+        return 'Rock beats scissor';
+    } else if (randomNo === 2 && num === 1) {
+        return 'Scissor beats paper';
+    } else if (randomNo === 1 && num === 3) {
+        return 'paper beats rock';
+    } else {
+        return 'Its a draw';
+    }
+}
+
+game(2);
